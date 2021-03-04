@@ -1,7 +1,7 @@
 /**
  * 
  */
-package sef.module3.activity;
+package activity;
 
 /**
  * @author 
@@ -23,21 +23,20 @@ public class Calculator {
 	
 	}
 
-
 	private static int add(int x, int y) {
 		int sum = x + y;
 		return sum;
 	}
 
 	private static int subtract(int x, int y) {
-		int diff = 0;
-		if (x > y) {
+		int result = 0;
+		if (x > y) { result = x - y;
 			// complete the code
-		} else {
+		} else { result = y - x;
 			// complete the code
 		}
 
-		return diff;
+		return result;
 	}
 
 	private static int multiply(int[] numbers) {
@@ -52,9 +51,9 @@ public class Calculator {
 
 	private static int divide(int x, int y) {
 		int divValue = 0;
-		if (x == 0 || y == 0) {
+		if (x == 0 || y == 0) { divValue = 0;
 			// complete the code
-		} else {
+		} else { divValue = x / y;
 			// complete the code
 		}
 		return divValue;

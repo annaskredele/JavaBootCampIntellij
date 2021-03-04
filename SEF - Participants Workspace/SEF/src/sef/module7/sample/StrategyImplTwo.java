@@ -1,9 +1,9 @@
-package sef.module7.sample;
+package sample;
 
 public class StrategyImplTwo implements Strategy {
 
+	@Override
 	public void execute() {
-		
 		System.out.println("Divide and conquer!");
 
 	}

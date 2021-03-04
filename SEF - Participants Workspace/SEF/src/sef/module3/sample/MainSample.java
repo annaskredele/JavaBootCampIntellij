@@ -4,7 +4,7 @@
  * Hello World Program
  */
 
-package sef.module3.sample;
+package sample;
 import java.lang.*;
 
 /**

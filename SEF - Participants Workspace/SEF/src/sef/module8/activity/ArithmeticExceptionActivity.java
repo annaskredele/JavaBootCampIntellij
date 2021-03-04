@@ -1,7 +1,8 @@
-package sef.module8.activity;
+package activity;
 // Needs to be completed
 public class ArithmeticExceptionActivity {
 	//1 - Type main method and call catchMe with 10 and 0
+	public static void main();
 
 
 void catchMe(int num1, int num2)
@@ -14,6 +15,8 @@ void catchMe(int num1, int num2)
 	
 	//3 - After handling the exception, write a finally block which
 	//prints a message "Thank you for using this program."
+
+	finally System.out.println("Thank you for using this program.");
 	
 	//4- try to call catchMe with 10 and 2 now and see which messages get printed. 
 	

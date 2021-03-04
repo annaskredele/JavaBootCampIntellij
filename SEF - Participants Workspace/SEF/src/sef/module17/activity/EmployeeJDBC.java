@@ -1,4 +1,4 @@
-package sef.module17.activity;
+package activity;
 //Needs to be completed
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,8 +8,15 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class EmployeeJDBC {
+	Employee emp = new Employee();
+	public static void main(String arg[]);
+		Connection con = createConnection();
+		Employee e1 = new Employee();
+		e1=findEmployeeById();
+		System.out.println(e1.getFirstName());
+	}
 
-	public Connection createConnection()
+	public static Connection createConnection()
 	{
 		Connection con=null;
 		String url = "jdbc:mysql://localhost/activity";
@@ -31,22 +38,29 @@ public class EmployeeJDBC {
 		return con;
 	}
 	
-	public Employee findEmployeeById(String id)
+	public static Employee findEmployeeById(int id,int sal)
 	{
 		Connection con = createConnection();
 		Employee emp=null;
 		try {
 		// 1 - Create a PreparedStatement with a query
-		
+			PreparedStatement pStmt = con.prepareStatement("select * from employee where id = ? and salary = ?");
 
 		// 2 - Search for the given id
-		
+			pStmt.setInt(1,id);
+			pStmt.setInt(2,sal);
 
 		// 3 - Execute this query
+		ResultSet rs = pStmt.executeQuery();
 		
-		
-		// 4 - If resultset is not null, then initialize emp object with data 
-		
+		// 4 - If resultset is not null, then initialize emp object with data
+			if(rs.next()){
+				emp = new Employee();
+				emp.setId(rs.getString(1));
+				emp.setFirstName(rs.getString(2));
+				emp.setLastName(rs.getString(3));
+				emp.setSalary(rs.getInt(4));
+			}
 		con.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -56,7 +70,7 @@ public class EmployeeJDBC {
 		return emp;
 	}
 
-	public ArrayList<Employee> findEmployeesByName(String name)
+	public ArrayList<Employee> findEmployeesByName(int name)
 	{
 		Connection con = createConnection();
 		ArrayList<Employee> list = new ArrayList<Employee>();
@@ -88,16 +102,15 @@ public class EmployeeJDBC {
 		
 		try {
 		// 1 - Create a PreparedStatement with a query
-		
-
+		 	PreparedStatement pStmt = con.prepareStatement("select * from employee where Salary = ?");
 		// 2 - Search for the given salary
-		
-
+			pStmt.setInt(4,salary);
 		// 3 - Execute this query
-
-		
+			ResultSet rs = pStmt.executeQuery();
 		// 4 - While there are records, continue 
+			while(rs.next()){
 
+			}
 		con.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

@@ -1,4 +1,4 @@
-package sef.module8.sample;
+package sample;
 // Needs to be completed
 public class ErrorSample {
 	
@@ -11,10 +11,10 @@ public class ErrorSample {
 	//it happens infinite times because there is no exit condition
 	//At one point in time, JVM would give up and show StackOverflowError
 	public static void infinity(){
-		//1 - Print a message
-	
+		//1 - Print a messages
+		System.out.println("Infinity!");
 		
 		//2 - Call infinity()
-	
+		infinity();
 	}
 }

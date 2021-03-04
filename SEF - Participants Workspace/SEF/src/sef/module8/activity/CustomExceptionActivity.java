@@ -1,4 +1,4 @@
-package sef.module8.activity;
+package activity;
 //Needs to be completed
 //1 - extend this class from Exception class
 public class CustomExceptionActivity{

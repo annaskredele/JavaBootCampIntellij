@@ -1,4 +1,4 @@
-package sef.module17.activity;
+package activity;
 // Complete Code
 class Employee {
 

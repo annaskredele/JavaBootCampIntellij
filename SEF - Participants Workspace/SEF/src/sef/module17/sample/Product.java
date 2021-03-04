@@ -1,5 +1,7 @@
 package sef.module17.sample;
 // Complete Code
+import org.junit.Test;
+
 import java.io.Serializable;
 
 public class Product implements Serializable {
@@ -23,6 +25,7 @@ public class Product implements Serializable {
 		this.price = price;
 	}
 
+	@Test
 	public String toString() {
         StringBuffer buffer = new StringBuffer();
         buffer.append("Description: " + description + ";");

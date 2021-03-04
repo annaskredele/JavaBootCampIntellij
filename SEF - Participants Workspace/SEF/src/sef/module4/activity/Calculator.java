@@ -1,7 +1,7 @@
 /**
  * 
  */
-package sef.module4.activity;
+package activity;
 
 /**
  * @author 

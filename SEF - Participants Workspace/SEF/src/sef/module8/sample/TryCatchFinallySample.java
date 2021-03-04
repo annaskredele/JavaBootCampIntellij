@@ -1,4 +1,4 @@
-package sef.module8.sample;
+package sample;
 // Needs to be completed
 public class TryCatchFinallySample {
 
@@ -18,6 +18,13 @@ public class TryCatchFinallySample {
 		//However, when we try to execute any operations on it, it'd throw a NullPointerException 
 		//Uncomment the following line and then run to see what happens.
 		//System.out.println(str.toUpperCase());
+
+		// annas tests
+		//try{
+		//	System.out.println(str.toUpperCase());
+		//}catch{NullPointerException ex){
+		//	System.out.println("A varieble is not initialized");
+		//}
 			
 		//You should program in a way that such issues are captured. Follow the instructions given by your trainer to complete this code with try, catch, finally blocks
 		

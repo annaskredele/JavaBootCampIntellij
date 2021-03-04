@@ -1,4 +1,4 @@
-package sef.module6.sample;
+package sample;
 
 /* Person_I class is the superclass 
  * Attributes : name, age
@@ -9,7 +9,7 @@ public class Person_I {
 	private String name;
 	private int age;
 	
-	//Behavior - default constructor
+	//Behavior - default constructor, class name the same as method name
 	public Person_I(){
 		this.name="Unknown";
 		this.age = 0;
