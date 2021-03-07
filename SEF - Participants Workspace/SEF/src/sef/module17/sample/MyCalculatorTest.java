@@ -74,7 +74,7 @@ public class MyCalculatorTest extends TestCase {
 
 		a = -5;		
 		b = 10;		
-		//	Checks the product of a postive value and a negative value
+		//	Checks the product of a positive value and a negative value
 		assertEquals(-50, (theCalculator.getProduct(a,b)),0);
 		assertEquals(-50, (theCalculator.getProduct(b,a)),0);
 		

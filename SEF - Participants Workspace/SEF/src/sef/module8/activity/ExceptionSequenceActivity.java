@@ -1,4 +1,4 @@
-package sef.module8.activity;
+package activity;
 //Needs to be completed
 //1 - Find out the error in this program and share your finding with the instructor
 public class ExceptionSequenceActivity {

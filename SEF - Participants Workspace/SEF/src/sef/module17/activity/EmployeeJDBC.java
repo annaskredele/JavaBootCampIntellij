@@ -8,8 +8,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class EmployeeJDBC {
+
 	Employee emp = new Employee();
 	public static void main(String arg[]);
+
 		Connection con = createConnection();
 		Employee e1 = new Employee();
 		e1=findEmployeeById();
@@ -120,26 +122,32 @@ public class EmployeeJDBC {
 		return list;
 	}
 
-	public void insertEmployee(Employee emp)
-	{
+	public void insertEmployee(Employee emp) {
 		Connection con = createConnection();
-		
-		//1 - Create a PreparedStatement with a query "insert into employee values(?,?,?,?)" 
-		
-		con.setAutoCommit(false);
 
-		//	Substitute the ? now.
-		
-		//2 - Execute this query using executeUpdate()
-			
-		System.out.println(rows + " row(s) added!");
-		con.commit();
-		con.close();
+		//1 - Create a PreparedStatement with a query "insert into employee values(?,?,?,?)" 
+		try {
+			con.setAutoCommit(false);
+			PreparedStatement pStmt = con.prepareStatement("INSERT INTO employee (firstname, lastname, salary) VALUES (?,?,?)");
+			//	Substitute the ? now.
+			pStmt.setString(1, emp.getFirstName());
+			pStmt.setString(2, emp.getLastName());
+			pStmt.setInt(3, emp.getSalary());
+			int result = pStmt.executeUpdate();
+			//2 - Execute this query using executeUpdate()
+			if (result == 1) {
+				System.out.println("Successfully instered values");
+			} else {
+				System.out.println("Error, something went wrong");
+			}
+
+			con.commit();
+			con.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 
 	}
 

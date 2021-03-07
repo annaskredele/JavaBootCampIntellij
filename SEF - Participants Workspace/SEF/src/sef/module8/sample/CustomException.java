@@ -13,8 +13,7 @@ public class CustomException extends Exception{
 	//2 - Override getMessage()
 	public String getMessage() {
 		//3 - Enter a message in it and return the same
-		String msg = "Here, I? am going to provide you with more information about this exception";
-			return null;
+		return "Here, I? am going to provide you with more information about this exception";
 	}
 	
 	

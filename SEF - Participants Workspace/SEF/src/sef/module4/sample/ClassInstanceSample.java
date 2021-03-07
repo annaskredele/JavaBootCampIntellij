@@ -1,4 +1,4 @@
-package sef.module4.sample;
+package sample;
 
 import java.util.Calendar;
 

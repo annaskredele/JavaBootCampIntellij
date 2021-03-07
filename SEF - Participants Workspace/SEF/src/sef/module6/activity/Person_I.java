@@ -23,10 +23,10 @@ public class Person_I {
 	}
 	
 	// write getter for String name
-	public String getName() {return name;}
+	public String getName() { return name; }
 	
 	// write setter for String name
-	public void setName(String name) {this.name = name;}
+	public void setName(String name) { this.name = name; }
 
 	// write getter for int age
 	public int getAge() {return age;}

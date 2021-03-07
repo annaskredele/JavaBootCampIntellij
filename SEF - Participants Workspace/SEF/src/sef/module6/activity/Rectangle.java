@@ -16,4 +16,12 @@ public class Rectangle extends Shape {
         this.breath = breath;
     }
 
+    public double calculateArea(){
+        return length*breath;
+    };
+
+    public double calculatePerimeter() {
+        return 2*(length + breath);
+    }
+
 }
